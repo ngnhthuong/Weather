@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/index.css" />
+    <link rel="stylesheet" href="../static/weather.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Minbo</title>
+  </head>
+  <body>
+    <main>
+      <ul class="com-head"></ul>
+      <div class="com-bodys">
+        <div class="com-nav">
+          <ul class="com-nav__funcs">
+            <li class="com-nav__func">
+              <i class="fas fa-address-card" style="color: #b197fc"></i>
+              <a
+                href="http://localhost:2999/information"
+                class="com-nav__func-name"
+                >Information</a
+              >
+            </li>
+            <li class="com-nav__func">
+              <i class="fas fa-align-left" style="color: rgb(255, 80, 80)"></i>
+              <a
+                href="http://localhost:2999/text-generate"
+                class="com-nav__func-name"
+                >Text Generate</a
+              >
+            </li>
+            <li class="com-nav__func">
+              <i class="fas fa-grin-beam" style="color: #ffd43b"></i>
+              <a
+                href="http://localhost:2999/face-detection"
+                class="com-nav__func-name"
+                >Face detection</a
+              >
+            </li>
+            <li
+              class="com-nav__func"
+              style="background-color: rgb(255, 255, 255, 0.5)"
+            >
+              <i class="fas fa-cloud" style="color: #74c0fc"></i>
+              <a
+                style="color: black"
+                href="http://localhost:2999/face-detection"
+                class="com-nav__func-name"
+                >Weather</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="com-body">
+          <div class="weather">
+            <div class="date--title">
+              <div class="data" style="color: red">Now: 11/02/2002</div>
+            </div>
+            <div class="weather-status">
+              <div class="weather-status__item">
+                <div class="weather-item weather-hour">5:00PM</div>
+                <div class="weather-item weather-icon">
+                  <i
+                    class="fas fa-cloud-sun"
+                    style="color: #74c0fc; font-size: 50px"
+                  ></i>
+                </div>
+                <div class="weather-item weather-name">Cloud</div>
+              </div>
+              <div class="weather-status__item">
+                <div class="weather-item weather-hour">6:00PM</div>
+                <div class="weather-item weather-icon">
+                  <i
+                    class="fas fa-cloud-showers-heavy"
+                    style="color: #c7c7c7; font-size: 50px"
+                  ></i>
+                </div>
+                <div class="weather-item weather-name">Heavy Rain</div>
+              </div>
+              <div class="weather-status__item">
+                <div class="weather-item weather-hour">7:00PM</div>
+                <div class="weather-item weather-icon">
+                  <i
+                    class="fas fa-sun"
+                    style="color: #ffd43b; font-size: 50px"
+                  ></i>
+                </div>
+                <div class="weather-item weather-name">Sun</div>
+              </div>
+              <div class="weather-status__item">
+                <div class="weather-item weather-hour">8:00PM</div>
+                <div class="weather-item weather-icon">
+                  <i
+                    class="fas fa-sun"
+                    style="color: #ffd43b; font-size: 50px"
+                  ></i>
+                </div>
+                <div class="weather-item weather-name">Sun</div>
+              </div>
+              <div class="weather-status__item">
+                <div class="weather-item weather-hour">9:00PM</div>
+                <div class="weather-item weather-icon">
+                  <i
+                    class="fas fa-sun"
+                    style="color: #ffd43b; font-size: 50px"
+                  ></i>
+                </div>
+                <div class="weather-item weather-name">Sun</div>
+              </div>
+            </div>
+            <div class="weather-statistic">
+              <div class="statistic-items">
+                <div class="statistic-item-head">
+                  <div class="statistic-item__title">Data Visualization</div>
+                </div>
+                <canvas
+                  id="myChart"
+                  width="100px"
+                  height="100px"
+                  class="chart-visualize__data"
+                ></canvas>
+              </div>
+
+              <div class="statistic-items">
+                <div class="statistic-item-head">
+                  <div class="statistic-item__title">Data Visualization</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../static/weather.js"></script>
+  </body>
+</html>

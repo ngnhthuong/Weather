@@ -18,6 +18,10 @@ def textGenerate():
 def faceDetection():
     return render_template('face-detection.html')
 
+@app.route('/weather')
+def weather():
+    return render_template('weather.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='localhost', port=2999)

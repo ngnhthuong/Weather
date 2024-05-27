@@ -2,7 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 18px;
+}
+
+.com-body__background{
+    background: url(../static/img/background.png);
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: white;
 }
 
 
@@ -74,7 +85,7 @@ main {
 
 
 .com-nav li:hover{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.5);
     color: rgb(0, 0, 0);
     a {
         color: rgb(0, 0, 0);
@@ -91,8 +102,10 @@ main {
     background-color: rgb(80, 80, 80, 0.5);
     border-radius: 0.5rem;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
-    padding-top: 2rem;
 }
 
+.com-body img{
+    width: 70%;
+    height: fit-content;
+}
