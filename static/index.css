@@ -50,6 +50,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem
 }
 
 .com-nav li{
@@ -89,5 +90,9 @@ main {
     height: 100%;
     background-color: rgb(80, 80, 80, 0.5);
     border-radius: 0.5rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding-top: 2rem;
 }
 
