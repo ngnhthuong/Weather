@@ -1,0 +1,12 @@
+{
+    "builds":[
+        {
+            "src":"main.py"
+        
+        }
+    ],
+    "routes":{
+        "src":"/(.*)",
+        "dest":"main.py"
+    }
+}
