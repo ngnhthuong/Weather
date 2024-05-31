@@ -75,6 +75,6 @@ canvas {
     background-color: rgb(255, 80, 80);
     border: none;
     color: white;
-    font-weight: bold;
+    /* font-weight: bold; */
     border-radius: 0.5rem;
 }
