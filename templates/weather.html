@@ -51,12 +51,12 @@
                     <div class="weather-item weather-icon">
                       <i class="fas fa-cloud-showers-heavy" style="color: #74c0fc; font-size: 50px"></i>
                     </div>
-                    <div class="weather-item weather-name">Rain ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
+                    <div class="weather-item weather-name">Rain {{weather.Predicted}}% - ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
                   {% else %}
                     <div class="weather-item weather-icon">
                       <i class="fas fa-cloud-sun" style="color: #e3fc74; font-size: 50px"></i>
                     </div>
-                    <div class="weather-item weather-name">Sun ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
+                    <div class="weather-item weather-name">Sun {{weather.Predicted}}% - ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
                   {% endif %}
                 </div>
               {% else %}
@@ -66,33 +66,34 @@
                     <div class="weather-item weather-icon">
                       <i class="fas fa-cloud-showers-heavy" style="color: #74c0fc; font-size: 50px"></i>
                     </div>
-                    <div class="weather-item weather-name">Rain ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
+                    <div class="weather-item weather-name">Rain {{weather.Predicted}}% - ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
                   {% else %}
                     <div class="weather-item weather-icon">
                       <i class="fas fa-cloud-sun" style="color: #e3fc74; font-size: 50px"></i>
                     </div>
-                    <div class="weather-item weather-name">Sun ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
+                    <div class="weather-item weather-name">Sun {{weather.Predicted}}% - ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
                   {% endif %}
                 </div>
               {% endif %}
             {% endfor %}
           </div>
           <div class="weather-statistic">
+
+            <div class="statistic-items">
+              <div class="statistic-item-head">
+                <div class="statistic-item__title">Visualization</div>
+              </div>
+
+              <div class="plots-result">
+                <img style="width: 99%; height: fit-content" src="../static/model/visualization.png" alt="" />
+            </div>
             <div class="statistic-items">
               <div class="statistic-item-head">
                 <div class="statistic-item__title">Results</div>
               </div>
+
               <div class="plots-result">
                 <img class="plot" src="../static/model/result_MAE.png" alt="" />
-              </div>
-            </div>
-            <div class="statistic-items">
-              <div class="statistic-item-head">
-                <div class="statistic-item__title">Data Visualization</div>
-              </div>
-              <div class="plots-result">
-                <img class="plot" src="../static/model/result_MAE.png" alt="" />
-              </div>
             </div>
             <div class="statistic-items">
               <div class="statistic-item-head">
