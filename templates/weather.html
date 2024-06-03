@@ -56,7 +56,7 @@
                     <div class="weather-item weather-icon">
                       <i class="fas fa-cloud-sun" style="color: #e3fc74; font-size: 50px"></i>
                     </div>
-                    <div class="weather-item weather-name">Sun {{weather.Predicted}}% - ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
+                    <div class="weather-item weather-name">Sun R{{weather.Predicted}}% - ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
                   {% endif %}
                 </div>
               {% else %}
@@ -71,7 +71,7 @@
                     <div class="weather-item weather-icon">
                       <i class="fas fa-cloud-sun" style="color: #e3fc74; font-size: 50px"></i>
                     </div>
-                    <div class="weather-item weather-name">Sun {{weather.Predicted}}% - ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
+                    <div class="weather-item weather-name">Sun R{{weather.Predicted}}% - ({{ weather.HumidityMin }}/{{ weather.HumidityMax }}°C)</div>
                   {% endif %}
                 </div>
               {% endif %}
@@ -94,6 +94,7 @@
 
               <div class="plots-result">
                 <img class="plot" src="../static/model/result_MAE.png" alt="" />
+                <img class="plot" src="../static/model/result_RMSE.png" alt="" />
             </div>
             <div class="statistic-items">
               <div class="statistic-item-head">

@@ -1,0 +1,101 @@
+Dưới đây là một ví dụ về dataset mẫu cho phân tích dữ liệu bán hàng. Dataset này bao gồm các bảng dimensions và fact cần thiết để thực hiện các phân tích bán hàng cơ bản. Các bảng chính bao gồm bảng FactSales và các bảng dimensions như Time, Customer, Product, và Store.
+
+### 1. Time Dimension
+**Mục đích**: Phân tích dữ liệu theo các khoảng thời gian khác nhau.
+
+**Các thuộc tính**:
+- DateKey (Primary Key)
+- Date
+- Year
+- Quarter
+- Month
+- Day
+- Weekday
+
+**Ví dụ**:
+| DateKey | Date       | Year | Quarter | Month | Day | Weekday  |
+|---------|------------|------|---------|-------|-----|----------|
+| 20230101| 2023-01-01 | 2023 | Q1      | 1     | 1   | Sunday   |
+| 20230102| 2023-01-02 | 2023 | Q1      | 1     | 2   | Monday   |
+
+### 2. Customer Dimension
+**Mục đích**: Phân tích dữ liệu theo khách hàng.
+
+**Các thuộc tính**:
+- CustomerKey (Primary Key)
+- CustomerID
+- Name
+- Gender
+- DateOfBirth
+- Email
+- Phone
+- Address
+- City
+- State
+- Country
+
+**Ví dụ**:
+| CustomerKey | CustomerID | Name            | Gender | DateOfBirth | Email              | Phone       | Address           | City       | State | Country |
+|-------------|------------|-----------------|--------|-------------|--------------------|-------------|-------------------|------------|-------|---------|
+| 1           | CUST001    | John Doe        | Male   | 1980-05-15  | john@example.com   | 123-456-7890| 123 Elm St        | Springfield| IL    | USA     |
+| 2           | CUST002    | Jane Smith      | Female | 1990-07-20  | jane@example.com   | 987-654-3210| 456 Oak St        | Metropolis | NY    | USA     |
+
+### 3. Product Dimension
+**Mục đích**: Phân tích dữ liệu theo sản phẩm.
+
+**Các thuộc tính**:
+- ProductKey (Primary Key)
+- ProductID
+- Name
+- Category
+- SubCategory
+- Brand
+- Price
+
+**Ví dụ**:
+| ProductKey | ProductID | Name        | Category | SubCategory | Brand   | Price |
+|------------|------------|-------------|----------|-------------|---------|-------|
+| 1          | PROD001    | Laptop      | Electronics | Computers | BrandA  | 1000  |
+| 2          | PROD002    | Smartphone  | Electronics | Mobile    | BrandB  | 500   |
+
+### 4. Store Dimension
+**Mục đích**: Phân tích dữ liệu theo cửa hàng.
+
+**Các thuộc tính**:
+- StoreKey (Primary Key)
+- StoreID
+- StoreName
+- StoreType
+- Region
+- City
+- State
+- Country
+
+**Ví dụ**:
+| StoreKey | StoreID | StoreName        | StoreType | Region    | City       | State | Country |
+|----------|---------|------------------|-----------|-----------|------------|-------|---------|
+| 1        | STR001  | Downtown Store   | Retail    | NorthEast | New York   | NY    | USA     |
+| 2        | STR002  | Suburb Store     | Retail    | Midwest   | Chicago    | IL    | USA     |
+
+### 5. FactSales
+**Mục đích**: Chứa dữ liệu bán hàng thực tế, kết nối với các dimensions.
+
+**Các thuộc tính**:
+- SalesKey (Primary Key)
+- DateKey (Foreign Key)
+- CustomerKey (Foreign Key)
+- ProductKey (Foreign Key)
+- StoreKey (Foreign Key)
+- Quantity
+- SalesAmount
+- Discount
+- TotalAmount
+
+**Ví dụ**:
+| SalesKey | DateKey | CustomerKey | ProductKey | StoreKey | Quantity | SalesAmount | Discount | TotalAmount |
+|----------|---------|-------------|------------|----------|----------|-------------|----------|-------------|
+| 1        | 20230101| 1           | 1          | 1        | 2        | 2000        | 200      | 1800        |
+| 2        | 20230102| 2           | 2          | 2        | 1        | 500         | 50       | 450         |
+
+### Kết luận
+Các bảng trên đây tạo thành một mô hình dữ liệu bán hàng đơn giản nhưng đầy đủ, bao gồm các bảng dimensions (Time, Customer, Product, Store) và bảng fact (FactSales). Bạn có thể sử dụng mô hình này để thực hiện các phân tích như doanh thu theo thời gian, doanh thu theo khách hàng, doanh thu theo sản phẩm, và doanh thu theo cửa hàng. Đây là một cơ sở dữ liệu mẫu tốt để bạn bắt đầu với SSIS và thực hành ETL và phân tích dữ liệu bán hàng.
